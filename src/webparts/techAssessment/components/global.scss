@@ -1,0 +1,187 @@
+@import "~office-ui-fabric-react/dist/sass/References.scss";
+
+$redTxt: hsla(3, 100%, 25%, 1);
+$redBg: #ff4136;
+$yellowTxt: hsla(52, 100%, 20%, 1);
+$yellowBg: #ffdc00;
+$greenTxt: hsla(127, 63%, 15%, 1);
+$greenBg: #2ecc40;
+
+.assessmentWrap {
+    height: calc(100vh - 199px);
+    // height: calc(100vh - 130px);
+
+    .ms-ScrollablePane {
+        top: 40px;
+
+        &.formPane {
+            width: 800px;
+            margin-left: 50px;
+
+            .pageHead {
+                font-size: 27px;
+                font-weight: 100;
+            }
+
+            .pageHead,
+            .projName {
+                margin-right: 50px;
+                padding-top: 30px;
+
+                input {
+                    width: 533px;
+                }
+            }
+            .sectionList {
+                padding-top: 30px;
+
+                .sectionWrap {
+                    .sectionHead {
+                        background-color: #ddd;
+                        margin-bottom: 20px;
+                        padding: 20px;
+
+                        .sectionTitle {
+                            font-size: 24px;
+                            font-weight: 100;
+                        }
+                    }
+
+                    .subList {
+                        .subWrap {
+                            .subInner {
+                                background-color: #eee;
+                                margin-bottom: 20px;
+                                padding: 20px;
+
+                                .subTitle {
+                                    font-size: 20px;
+                                    font-weight: 100;
+                                }
+                            }
+
+                            .criteriaList {
+                                .criteriaWrap {
+                                    margin-bottom: 20px;
+                                    padding: 10px 20px;
+
+                                    .criteriaTitle {
+                                        width: 400px;
+                                    }
+
+                                    .criteriaCheckbox {
+                                        padding: 0 20px;
+                                    }
+
+                                    .criteriaText {
+                                        width: 500px;
+                                    }
+                                }
+                                .criteriaWrap:not(:last-child) {
+                                    border-bottom: 1px solid #ccc;
+                                }
+                            }
+                        }
+                    }
+
+                    .sectionScoreWrap {
+                        margin-left: auto !important;
+                    }
+                }
+            }
+        }
+
+        &.resultPane {
+            margin-left: 850px;
+
+            .resultList {
+                .resultHead {
+                    font-size: 21px;
+                    font-weight: 100;
+                    padding: 34px 20px 0;
+
+                    .resultProjName {
+                        font-weight: 600;
+                    }
+                }
+
+                .resultListItem {
+                    float: left;
+                    margin-bottom: 40px;
+                    margin-top: 40px;
+                    min-width: 450px;
+                    width: 50%;
+
+                    &.resultScoreWrap {
+                        height: 250px;
+                    }
+
+                    .tableHead {
+                        font-size: 18px;
+                        margin-bottom: 10px;
+                        margin-left: 30px;
+                    }
+                    table {
+                        border: 1px solid #ccc;
+                        border-collapse: collapse;
+                        margin-left: 60px;
+
+                        th {
+                            background-color: #eee;
+                            border: 1px solid #ccc;
+                            text-align: left;
+                            font-weight: 600;
+                            vertical-align: bottom;
+                        }
+                        td {
+                            border: 1px solid #ccc;
+                            min-width: 100px;
+                            padding: 6px;
+
+                            &.bg-red {
+                                background-color: $redBg;
+                                border: 1px solid $redBg;
+                                color: $redTxt;
+                            }
+                            &.bg-yellow {
+                                background-color: $yellowBg;
+                                border: 1px solid $yellowBg;
+                                color: $yellowTxt;
+                            }
+                            &.bg-green {
+                                background-color: $greenBg;
+                                border: 1px solid $greenBg;
+                                color: $greenTxt;
+                            }
+                        }
+
+                        tr.bg-red {
+                            background-color: $redBg;
+
+                            td {
+                                border: 1px solid $redBg;
+                                color: $redTxt;
+                            }
+                        }
+                        tr.bg-yellow {
+                            background-color: $yellowBg;
+
+                            td {
+                                border: 1px solid $yellowBg;
+                                color: $yellowTxt;
+                            }
+                        }
+                        tr.bg-green {
+                            background-color: $greenBg;
+
+                            td {
+                                border: 1px solid $greenBg;
+                                color: $greenTxt;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
